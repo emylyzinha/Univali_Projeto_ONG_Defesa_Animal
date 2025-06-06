@@ -51,36 +51,6 @@ app.get('/api/animais.json', (req, res) => {
 // Middleware para servir arquivos estáticos da pasta 'api'
 app.use(express.static(path.join(__dirname))); // Serve arquivos estáticos da pasta atual
 
-const nodemailer = require('nodemailer');
-
-app.use(bodyParser.urlencoded({ extended: true }));
-app.use(express.static(path.join(__dirname, 'Univali_Projeto_ONG_Defesa_Animal'))); 
-
-app.post('/enviar', async (req, res) => {
-  const dados = req.body;
-
-  const mensagem = Object.entries(dados).map(
-    ([campo, valor]) => `${campo}: ${valor}`
-  ).join('\n');
-
-  const transporter = nodemailer.createTransport({
-    service: 'gmail',
-    auth: {
-      user: 'emylysantosguitar@gmail.com',
-      pass: '20548620'
-    }
-  });
-
-  await transporter.sendMail({
-    from: 'emylysantosguitar@gmail.com',
-    to: 'emylysantosguitar@gmail.com',
-    subject: `Formulário de Adoção - Interesse no animal: ${dados.animal || 'Não especificado'}`,
-    text: mensagem
-  });
-
-  res.send('Formulário enviado com sucesso!');
-});
-
 // Iniciando o servidor
 app.listen(PORT, () => {
     console.log(`Servidor rodando na porta ${PORT}`);

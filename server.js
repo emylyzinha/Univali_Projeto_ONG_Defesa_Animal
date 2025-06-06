@@ -5,8 +5,6 @@ const path = require('path');
 const app = express();
 const PORT = 3000;
 
-app.use(bodyParser.json()); // Para analisar o corpo da requisição como JSON
-
 // Caminho para o arquivo JSON
 const animaisFilePath = path.join(__dirname, 'api', 'animais.json');
 

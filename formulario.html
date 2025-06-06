@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de Adoção</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+
+<!-- Navbar simples -->
+<nav class="navbar navbar-light bg-warning">
+    <div class="container">
+        <a class="navbar-brand" href="home.html">
+            <img src="./assets/imagens/logo01.png" alt="Logo" width="100">
+        </a>
+        <span class="navbar-text fw-bold">Formulário de Adoção</span>
+    </div>
+</nav>
+
+<!-- Formulário -->
+<div class="container mt-5 mb-5">
+    <h2 class="fw-bold mb-4 text-center">Formulário de Adoção</h2>
+    <p class="text-center"><b>Animal de interesse:</b><span id="animal-nome"></span></p>
+
+    <form action="enviar.php" method="POST">
+
+        <!-- Dados básicos -->
+        <div class="row">
+            <div class="col-md-6 mb-3">
+                <label class="form-label">Nome completo</label>
+                <input type="text" class="form-control" name="nome" required>
+            </div>
+            <div class="col-md-6 mb-3">
+                <label class="form-label">E-mail</label>
+                <input type="email" class="form-control" name="email" required>
+            </div>
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Telefone</label>
+            <input type="text" class="form-control" name="telefone" placeholder="(DDD) 00000-0000" required>
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Endereço completo</label>
+            <input type="text" class="form-control" name="endereco" required>
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Bairro</label>
+            <input type="text" class="form-control" name="bairro" required>
+        </div>
+
+        <!-- Sobre você -->
+        <div class="mb-3">
+            <label class="form-label">Você é maior de 18 anos?</label><br>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="maior18" value="Sim" required>
+                <label class="form-check-label">Sim</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="maior18" value="Não">
+                <label class="form-check-label">Não</label>
+            </div>
+            <input type="text" class="form-control mt-2" name="idade" placeholder="Se não, informe sua idade">
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Você:</label>
+            <select class="form-select" name="ocupacao" required>
+                <option selected disabled value="">Selecione...</option>
+                <option>Trabalha</option>
+                <option>Trabalha e estuda</option>
+                <option>Estuda</option>
+                <option>Não trabalha nem estuda</option>
+            </select>
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Já teve ou tem outro animal? Se sim, o que aconteceu?</label>
+            <input type="text" class="form-control" name="historico">
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Por que quer adotar um animal?</label>
+            <select class="form-select" name="motivo" required>
+                <option selected disabled value="">Escolha...</option>
+                <option>Companhia</option>
+                <option>Guarda</option>
+                <option>Presentear alguém</option>
+                <option>Não sei</option>
+                <option>Outro</option>
+            </select>
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Está preparado para cuidar por toda a vida do animal (12 a 15 anos)?</label><br>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="compromisso" value="Sim" required>
+                <label class="form-check-label">Sim</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="compromisso" value="Não">
+                <label class="form-check-label">Não</label>
+            </div>
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Tem condições financeiras para cuidar do animal?</label><br>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="condicoes" value="Sim" required>
+                <label class="form-check-label">Sim</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="condicoes" value="Não">
+                <label class="form-check-label">Não</label>
+            </div>
+        </div>
+
+        <!-- Sobre a residência -->
+        <div class="mb-3">
+            <label class="form-label">Mora sozinho? Se não, com quem?</label>
+            <input type="text" class="form-control" name="mora_sozinho">
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Todos da casa concordam com a adoção?</label>
+            <select class="form-select" name="concorda" required>
+                <option selected disabled value="">Escolha...</option>
+                <option>Sim</option>
+                <option>Não</option>
+            </select>
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Há casos de alergia na residência?</label>
+            <input type="text" class="form-control" name="alergia">
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Há crianças? Quantas e quais idades?</label>
+            <input type="text" class="form-control" name="criancas">
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Quem será o responsável pelos cuidados?</label>
+            <input type="text" class="form-control" name="responsavel" required>
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Em caso de viagens, quem cuidará do animal?</label>
+            <input type="text" class="form-control" name="viagens">
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Quantas horas a casa fica sem ninguém por dia?</label>
+            <input type="text" class="form-control" name="tempo_sozinho">
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Descreva sua residência (casa, apto, telas, quintal...)</label>
+            <textarea class="form-control" rows="3" name="residencia"></textarea>
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Se mudar para apartamento, o que fará em relação ao animal?</label>
+            <input type="text" class="form-control" name="mudanca">
+        </div>
+
+        <!-- Cenários -->
+        <div class="mb-3">
+            <label class="form-label">O que faria se:</label>
+            <textarea class="form-control mb-2" name="se_perder" placeholder="Se o animal se perder"></textarea>
+            <textarea class="form-control mb-2" name="se_gravidez" placeholder="Se alguém engravidar"></textarea>
+            <textarea class="form-control mb-2" name="se_adoecer" placeholder="Se o animal adoecer"></textarea>
+            <textarea class="form-control mb-2" name="se_morder" placeholder="Se morder ou arranhar alguém"></textarea>
+            <textarea class="form-control mb-2" name="se_destruir" placeholder="Se destruir algum objeto"></textarea>
+            <textarea class="form-control mb-2" name="se_necessidades_local_errado" placeholder="Se fizer necessidades em local errado"></textarea>
+            <textarea class="form-control" name="como_ensinar" placeholder="Como ensinar a não fazer coisas erradas"></textarea>
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Tem consciência da importância da castração?</label>
+            <select class="form-select" name="castracao" required>
+                <option selected disabled value="">Escolha...</option>
+                <option>Sim</option>
+                <option>Não</option>
+            </select>
+        </div>
+
+        <button type="submit" class="btn btn-warning">Enviar</button>
+        <a href="index.html" class="btn btn-secondary">Voltar</a>
+    </form>
+</div>
+
+<!-- Footer -->
+<footer class="bg-warning py-3">
+    <div class="container text-center">
+        <img src="./assets/imagens/logo01.png" style="height: 60px;" alt="Logo">
+        <p class="mb-0">&copy; 2025 ONG de Adoção. Todos os direitos reservados.</p>
+    </div>
+</footer>
+
+<script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const animalIndex = urlParams.get('animal');
+    const animalNome = animalIndex !== null ? `Animal ${parseInt(animalIndex) + 1}` : 'Desconhecido'; // Exemplo de nome
+    document.getElementById('animal-nome').innerText = animalNome;
+    document.getElementById('animal-index').value = animalIndex;
+</script>
+
+</body>
+</html>

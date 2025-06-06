@@ -1,0 +1,178 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+  }
+  
+  .menu { 
+    background-color: #22201f;
+  }
+  
+  .nav-link {
+    color: #ffd000;
+  }
+  .nav-link:hover {
+    color: #888;
+  }
+  
+  .navbar-nav .nav-link {
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 0.95rem;
+  }
+  
+  .slide {
+    background-color: whitesmoke;
+  }
+  
+  img.pata {
+    width: 80px;
+  }
+  
+  .section-selo {
+    background-color: #ffd000;
+  }
+  
+  img.selo {
+    width: 50px;
+  }
+  
+  img.pet {
+    height: 40%;
+  }
+  
+  
+  
+  
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #fffaf0;
+    line-height: 1.5;
+  
+  }
+  
+  nav {
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  nav a {
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  section {
+    padding: 40px 20px;
+  }
+  
+  .hero {
+    text-align: center;
+    background-color: #fff7d6;
+  }
+  
+  .hero h2 {
+    margin-bottom: 10px;
+    color: #222;
+  }
+  
+  .hero p {
+    color: #555;
+  }
+  
+  .adote,
+  .quem-somos,
+  .formulario {
+    background-color: #fffde7;
+  }
+  
+  .animal-lista {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+  }
+  
+  .animal-card {
+    width: 200px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .animal-card img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+  }
+  
+  .animal-card .info {
+    padding: 10px;
+  }
+  
+  .animal-card .info h3 {
+    margin: 0;
+    font-size: 18px;
+    color: #444;
+  }
+  
+  .animal-card .info p {
+    margin: 5px 0 0;
+    font-size: 14px;
+    color: #666;
+  }
+  
+  form {
+    max-width: 600px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  label {
+    font-weight: bold;
+    margin-top: 10px;
+  }
+  
+  input,
+  select,
+  textarea {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  button {
+    background-color: #fdd835;
+    border: none;
+    padding: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 20px;
+  }
+  
+  footer {
+    background-color: #fdd835;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+    border-top: 1px solid #ccc;
+  }
+  
+  #logo {
+    width: 100px;
+  }
+  

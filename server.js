@@ -21,6 +21,11 @@ function salvarAnimais(animais) {
     fs.writeFileSync(animaisFilePath, JSON.stringify(animais, null, 2));
 }
 
+
+// Permite corpo de até 100MB (em JSON)
+app.use(express.json({ limit: '100mb' }));
+app.use(express.urlencoded({ extended: true, limit: '100mb' }));
+
 // Rota para adicionar animais
 app.post('/api/animais', (req, res) => {
     const novoAnimal = req.body; // Obtenha os dados do animal do corpo da requisição

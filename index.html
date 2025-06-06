@@ -217,48 +217,6 @@
       </footer>
       
       
-<!--
-
-    <div class="container mt-5">
-        <h3 class="text-center">Animais para Adoção</h3>
-        <div id="adocao-lista" class="row"></div>
-    </div>-->
-<!--
-    <script>
-        function carregarAnimaisAdocao() {
-            fetch('/api/animais.json')
-                .then(res => res.json())
-                .then(animais => {
-                    const lista = document.getElementById('adocao-lista');
-                    lista.innerHTML = '';
-
-                    animais.forEach((animal, index) => {
-                        const card = document.createElement('div');
-                        card.className = 'col-md-4 mb-4';
-                        card.innerHTML = `
-                            <div class="card h-100">
-                                <img src="${animal.imagem}" class="card-img-top" alt="Imagem de ${animal.nome}" style="height: 200px; object-fit: cover;">
-                                <div class="card-body">
-                                    <h5 class="card-title">${animal.nome}</h5>
-                                    <p><b>Raça:</b> ${animal.raca}</p>
-                                    <p><b>Cor:</b> ${animal.cor}</p>
-                                    <p><b>Idade:</b> ${animal.idade}</p>
-                                </div>
-                            </div>
-                        `;
-                        lista.appendChild(card);
-                    });
-                })
-                .catch(err => {
-                    console.error(err);
-                    const lista = document.getElementById('adocao-lista');
-                    lista.innerHTML = '<p style="color: red; text-align:center;">Erro ao carregar animais para adoção.</p>';
-                });
-        }
-
-        window.onload = carregarAnimaisAdocao;
-    </script>-->
-
 <script>
     function carregarAnimaisAdocao() {
         fetch('/api/animais.json')
@@ -294,5 +252,7 @@
 
     window.onload = carregarAnimaisAdocao;
 </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

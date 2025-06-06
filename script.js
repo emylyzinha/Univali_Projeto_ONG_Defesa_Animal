@@ -6,7 +6,7 @@ form.addEventListener('submit', async (e) => {
     const file = document.getElementById('imagem').files[0];
 
     // Verificar o tamanho do arquivo (em bytes)
-    const maxSize = 10 * 1024 * 1024; // 10MB
+    const maxSize = 60 * 1024 * 1024; // 10MB
     if (file.size > maxSize) {
         alert('O arquivo é muito grande. O tamanho máximo permitido é 10MB.');
         return;

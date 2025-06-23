@@ -21,6 +21,14 @@
     padding-right: 10px;
     font-size: 0.95rem;
   }
+
+#leis h6 {
+  font-size: 1rem;
+}
+#leis p {
+  margin-bottom: 0.5rem;
+}
+
   
   .slide {
     background-color: whitesmoke;

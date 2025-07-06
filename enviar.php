@@ -1,7 +1,7 @@
 <?php
 
 $para = "emylysantosguitar@gmail.com"; // <-- Altere para o e-mail da ONG
-$assunto = "Formulário de Adoção - Interesse no animal: Nina";
+$assunto = "Formulário de Adoção";
 
 $mensagem = "Formulário de Adoção:\n\n";
 foreach ($_POST as $campo => $valor) {

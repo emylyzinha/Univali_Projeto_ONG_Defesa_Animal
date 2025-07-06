@@ -287,7 +287,7 @@
 
   <script>
   function carregarAnimaisAdocao() {
-    fetch('https://univali-projeto-ong-defesa-animal.onrender.com/api/animais')
+    fetch('https://univali-projeto-ong-defesa-animal.onrender.com/api/animais.json')
       .then(res => res.json())
       .then(animais => {
         const lista = document.getElementById('adocao-lista');

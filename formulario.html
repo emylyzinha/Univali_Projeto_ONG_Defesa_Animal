@@ -13,7 +13,7 @@
 <nav class="navbar navbar-light bg-warning">
     <div class="container">
         <a class="navbar-brand" href="home.html">
-            <img src="./assets/imagens/logo01.png" alt="Logo" width="100">
+            <img src="./assets/imagens/logo01-Photoroom.png" alt="Logo" width="100">
         </a>
         <span class="navbar-text fw-bold">Formulário de Adoção</span>
     </div>
@@ -198,18 +198,12 @@
 <!-- Footer -->
 <footer class="bg-warning py-3">
     <div class="container text-center">
-        <img src="./assets/imagens/logo01.png" style="height: 60px;" alt="Logo">
+        <img src="./assets/imagens/logo01-Photoroom.png" style="height: 60px;" alt="Logo">
         <p class="mb-0">&copy; 2025 ONG de Adoção. Todos os direitos reservados.</p>
     </div>
 </footer>
 
-<script>
-    const urlParams = new URLSearchParams(window.location.search);
-    const animalIndex = urlParams.get('animal');
-    const animalNome = animalIndex !== null ? `Animal ${parseInt(animalIndex) + 1}` : 'Desconhecido'; // Exemplo de nome
-    document.getElementById('animal-nome').innerText = animalNome;
-    document.getElementById('animal-index').value = animalIndex;
-</script>
+<script src="./script.js"></script>
 
 </body>
 </html>

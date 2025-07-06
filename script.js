@@ -23,7 +23,7 @@ form.addEventListener('submit', async (e) => {
             imagem: reader.result
         };
 
-        fetch('http://localhost:3000/api/animais', {
+        fetch('https://<URL-do-seu-backend-render>.onrender.com/api/animais', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(animal)

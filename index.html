@@ -284,6 +284,44 @@
       </div>
     </div>
   </footer>
+
+  <script>
+  function carregarAnimaisAdocao() {
+    fetch('https://univali-projeto-ong-defesa-animal.onrender.com/api/animais')
+      .then(res => res.json())
+      .then(animais => {
+        const lista = document.getElementById('adocao-lista');
+        lista.innerHTML = '';
+
+        animais.forEach((animal, index) => {
+          const card = document.createElement('div');
+          card.className = 'col-md-4 mb-4';
+          card.innerHTML = `
+            <div class="card h-100">
+              <img src="${animal.imagem}" class="card-img-top" alt="Imagem de ${animal.nome}" style="height: 350px; object-fit: cover;">
+              <div class="card-body">
+                <h5 class="card-title">${animal.nome}</h5>
+                <p><b>Raça:</b> ${animal.raca}</p>
+                <p><b>Cor:</b> ${animal.cor}</p>
+                <p><b>Idade:</b> ${animal.idade}</p>
+                <a href="formulario.html?animal=${index}" class="btn btn-warning">Adotar</a>
+              </div>
+            </div>
+          `;
+          lista.appendChild(card);
+        });
+      })
+      .catch(err => {
+        console.error(err);
+        const lista = document.getElementById('adocao-lista');
+        lista.innerHTML = '<p class="text-danger text-center">Erro ao carregar animais para adoção.</p>';
+      });
+  }
+
+  // Executa quando a página terminar de carregar
+  window.onload = carregarAnimaisAdocao;
+</script>
+
   <script src="./script.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"></script>
 </body>

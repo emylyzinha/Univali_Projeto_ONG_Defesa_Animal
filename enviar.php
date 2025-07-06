@@ -1,6 +1,6 @@
 <?php
 
-$para = "emylysantosguitar@gmail.com"; // <-- Altere para o e-mail da ONG
+$para = "samanthatondo@gmail.com"; // <-- Altere para o e-mail da ONG
 $assunto = "Formulário de Adoção";
 
 $mensagem = "Formulário de Adoção:\n\n";
